@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botões com Alerta</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+        background-color: #f4f4f4;
+    }
+
+    h1{
+        color: #333;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    button{
+        padding: 15px 25px;
+        border: none;
+        border-radius: 10px;
+        background-color: #007bff;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover{
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+</style>
+
+</head>
+<body>
+
+<h1>Escolha um botão</h1>
+
+<div class="container">
+    <button onclick="botao1()">Botão 1</button>
+    <button onclick="botao2()">Botão 2</button>
+    <button onclick="botao3()">Botão 3</button>
+</div>
+
+<script>
+    function botao1(){
+        alert("Você clicou no Botão 1");
+    }
+
+    function botao2(){
+        alert("Você clicou no Botão 2");
+    }
+
+    function botao3(){
+        alert("Você clicou no Botão 3");
+    }
+</script>
+
+</body>
+</html>

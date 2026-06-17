@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Noto+Sans+Symbols:wght@100..900&display=swap');
+
+
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+    margin: 2rem;
+}
+h1{
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+li {
+    padding: 0.2em;
+
+}
+.Hobbies {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.Hobbies img {
+    width: 30rem;
+    height: auto;
+}
+

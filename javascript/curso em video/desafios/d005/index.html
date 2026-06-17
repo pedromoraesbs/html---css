@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convesor de medidas</title>
+</head>
+
+<body>
+    <h1>Calculo de Medidas</h1>
+    <button onclick="clicou()">Converter</button>
+    <div id="men">
+        Clique no botão a cima para iniciar
+    </div>
+    <div id="res">
+    </div>
+
+
+    <script>
+        function clicou() {
+            var num = Number(window.prompt('Digite uma distancia em metros(m)').replace(',', '.'))
+            var km = num / 1000
+            var hm = num / 100
+            var dam = num / 10
+            var dm = num * 10
+            var cm = num * 100
+            var mm = num * 1000
+            var men = document.getElementById('men')
+            men.innerText = `A distancia de ${num} metros, corresponde a...`
+            document.getElementById('res').innerText = `
+            ${km} Quilômetros (km)
+            ${hm} Hectômetro (hm)
+            ${dam} Decâmetro (dam)
+            ${dm} Decímetro (dm)
+            ${cm} Centímetro (cm)
+            ${mm} Milímetro (mm)
+            `
+        }
+    </script>
+</body>
+
+</html>

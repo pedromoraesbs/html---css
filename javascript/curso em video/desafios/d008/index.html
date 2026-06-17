@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Desconto</title>
+</head>
+<body>
+    <h1>Calculo de Desconto</h1>
+    <div><input type="button" value="Descoto" onclick="calcular()"></div>
+    <div id="res">Clique no botão a cima para iniciar</div>
+    <script>
+        function calcular(){
+            let prod = window.prompt('Qual o produto que você quer calcular')
+            let valp = window.prompt(`Qual o valor do ${prod}` )
+            let res = document.getElementById('res')
+            let des = valp / 10
+            res.innerHTML = `Calculando  desconto de 10% para ${prod}`
+            res.innerHTML = `o seu desconto é de ${des}`
+        }
+    </script>
+</body>
+</html>

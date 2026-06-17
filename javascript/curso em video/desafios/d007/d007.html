@@ -1,0 +1,28 @@
+|<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> U$</title>
+</head>
+<body>
+    <h1>Conversor R$ &rarr; U$</h1>
+    <div>
+        <button onclick="converter()">Converter</button>
+    </div>
+    <div id="res">
+        <p>Clique no botão a cima  para converter</p>
+    </div>
+
+
+    <script>
+        let dolar = Number(window.prompt('Antes de mais nada. Quanto esta a cotação do dolar?').replace(',', '.'))
+        function converter(){
+            let real = Number(window.prompt('Quanto você tem na carteira?').replace(',', '.'))
+            let c = d*r
+            let res = document.getElementById('res')
+            res.innerHTML = `Você tem ${c} dolares`
+        }
+    </script>
+</body>
+</html>

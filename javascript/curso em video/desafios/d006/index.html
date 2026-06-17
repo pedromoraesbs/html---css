@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <button onclick="converter()">Converter</button>
+    <div id="c">Clique no botão a cima para iniciar</div>
+    <div id="res"></div>
+
+    <script>
+        function converter (){
+            var cel = Number (window.prompt('Digite uma temperatura em C°(celsius)'))
+            var kel = 273.15 + cel
+            var fah = (cel*(9/5)+32)
+            var res = document.getElementById('res')
+            var c = document.getElementById('c')
+            c.innerHTML = `A temperuta de ${cel}°C, corresponde a...`
+            res.innerHTML = `${kel}°K(kelvin)<br/>${fah}°F(Fahrenheit)`
+        }
+    </script>
+</body>
+</html>
