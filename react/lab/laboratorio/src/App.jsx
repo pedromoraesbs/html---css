@@ -1,122 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useState } from "react"
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [contador, setContador] = useState(0)
+
+  function aumentar() {
+    setContador(prev => prev + 1)
+  }
+
+  function diminuir() {
+    setContador(prev => prev - 1)
+  }
+
+  function aumentarDois() {
+    setContador(prev => prev + 2)
+  }
+
+
+  const [nome, setNome] = useState("")
+  const [idade, setIdade] = useState("")
+  const [profissao, setProfissao] = useState("")
+
+function mudarNome(evento){
+  setNome(evento.target.value)
+}
+
+const pessoas =[
+  { id: 1, nome: "Pedro"},
+  { id: 2, nome: "Maria"},
+  { id: 3, nome: "Gaby"}
+]
+
+
+
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <h1>{contador}</h1>
+      <button onClick={aumentar}>+</button><br />
+      <button onClick={diminuir}>-</button><br />
+      <button onClick={aumentarDois}>+2</button><br />
 
-      <div className="ticks"></div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <input placeholder="Nome" value={nome} onChange={mudarNome}  /><br />
+      <input placeholder="Idade" value={idade} onChange={(evento) => {
+        setIdade(evento.target.value)
+      }} /><br/>
+      <input placeholder="Profissão" value={profissao} onChange={(evento)=> {
+        setProfissao(evento.target.value)
+      }} />
+      <h1>Nome: {nome}</h1>
+      <h1>Idade: {idade}</h1>
+      <h1>Profissão: {profissao}</h1>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      
     </>
   )
 }
 
 export default App
+
+
+
+{
+  pessoas.map((pessoa) => {
+    return <Pessoa nome={pessoa.nome}/>
+  })
+}
