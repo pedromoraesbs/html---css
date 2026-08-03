@@ -3,25 +3,34 @@ import { useState, useEffect, } from "react"
 
 function Home() {
     const [usuarios, setUsuarios] = useState([])
-
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
 
-        async function buscarUsuario() {
+        async function buscarUsuarios() {
             try {
                 const response = await fetch("https://jsonplaceholder.typicode.com/users")
 
                 const dados = await response.json()
 
-                setUsuarios(dados)
+                setUsuarios([])
             } catch (erro) {
                 console.log("Erro", erro)
+            } finally {
+                setLoading(false)
             }
 
         }
-        buscarUsuario()
+        buscarUsuarios()
     }, [])
 
+    if (loading) {
+        return <h1>Carregando Usuários...</h1>
+    }
+    
+    if(usuarios.length === 0 ) {
+        return <h1>Nenhum usuário encontrado.</h1>
+    }
 
 
     return (
