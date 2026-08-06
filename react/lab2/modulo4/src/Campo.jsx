@@ -1,17 +1,11 @@
-function Campo({ atualizarIdade, atualizaNome }) {
+function Campo({ atualizarIdade, atualizarNome }) {
     return (
         <>
-            <input onChange={(e) => atualizarIdade(e.target.value)} />
-            <input onChange={(n) => atualizarNome(n.target.value)} />
+            <input onChange={(e) => atualizarIdade(e.target.value)} /> <br />
+            
         </>
     )
 }
 
 export default Campo
-
-// function CampoNome({ atualizarNome }) {
-//     return (
-//         <input onChange={(n) => atualizarNome(n.target.value)} />
-//     )
-// }
 

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Campo from "./Campo"
+import CampoNome from "./CampoNome"
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     <>
 
       <h2>Nome: {nome}</h2>
-      <Campo atualizarNome={setNome} />
+      <CampoNome atualizarNome={setNome} />
       <h2>Idade: {idade}</h2>
       <Campo atualizarIdade={setIdade} />
     </>
