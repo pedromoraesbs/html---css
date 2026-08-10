@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+body.light {
+  background: #2EA1C9;
+  transition: .3s;
+
+}
+
+body.dark {
+  background: #121212;
+  transition: .3s;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px;
+}
+
+h1{
+    color: #0D0D0D;
+    font-size: 32px;
+    text-align: center;
+}
+
+form{
+    display: flex; 
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-radius:  10px;
+    background-color: #F2F2F2;
+    max-width: 50%;
+    width: 400px;
+    margin-bottom: 20px;
+
+    & button {
+        border-radius: 30px;
+        background-color: #2EA1C9;
+        height: 40px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer ;
+        color: #fff;
+        font-size: 14px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.37);
+    }
+    & button:hover {
+        opacity: 0.8; 
+    }
+    & input {
+        border:  1px solid rgba(63, 63, 63, 0.692);
+        border-radius: 30px;
+        height: 40px;
+        background-color: #ffffff;
+        color: #0D0D0D;
+        font-size:  16px;
+        padding: 16px;
+
+    }
+}
+
+.card  {
+    display: flex;
+    justify-content: space-between ; 
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    
+    & p {
+        color: #303030;
+        font-weight: bold ;
+        
+
+        & span{
+            font-weight: normal;
+        }
+    }
+
+    & button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    & button:hover {
+        opacity: 0.8; 
+    }
+}
+
+img{
+    width: 1rem;  
+}
+
+.theme-button{
+    margin:10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ffffff60;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.466);
+}
+
+.light form{
+    background:#F2F2F2;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.466);
+}
+
+.light h1{
+    color:#0D0D0D;
+}
+
+.light .card{
+    background:#21caf0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.466);
+}
+
+.light input{
+    background:white;
+    color:#000;
+}
+
+.dark form{
+    background:#1F1F1F;
+    box-shadow: 5px 5px 5px rgba(145, 145, 145, 0.205);
+}
+
+.dark h1{
+    color:white;
+}
+
+.dark .card{
+    background:#333;
+    box-shadow: 5px 5px 5px rgba(145, 145, 145, 0.205);
+}
+
+.dark p{
+    color:white;
+}
+
+.dark span{
+    color:#ddd;
+}
+
+.dark input{
+    background:#2E2E2E;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark input::placeholder{
+    color:#bbb;
+}
+
+.light .theme-button{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.466);
+}
+
+.dark .theme-button{
+    box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.356);
+    color: #F2F2F2;
+}
