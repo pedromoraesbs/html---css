@@ -1,21 +1,24 @@
 import { Routes, Route } from "react-router-dom"
 
+import Home from "./pages/Home"
 import Perfil from "./pages/Perfil"
 
 
 
 function App() {
+    return (
+        <>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/perfil">Perfil</Link>
+            </nav>
 
-
-
-  return (
-    <Routes>
-       <h2>ola pagina principal...2</h2>
-      
-      <Route path="/perfil" element={<Perfil />} />
-    
-    </Routes>
-  )
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/perfil" element={<Perfil />} />
+            </Routes>
+        </>
+    )
 }
 
 export default App
