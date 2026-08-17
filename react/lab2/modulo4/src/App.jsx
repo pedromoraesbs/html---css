@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, NavLink } from "react-router-dom"
 
 import Home from "./pages/Home"
 import Perfil from "./pages/Perfil"
@@ -9,8 +9,8 @@ function App() {
     return (
         <>
             <nav>
-                <Link to="/">Home</Link>
-                <Link to="/perfil">Perfil</Link>
+                <NavLink to="/" className={({isActive}) => isActive ? "ativo" : ""}>Home</NavLink>
+                <NavLink to="/perfil" className={({isActive}) => isActive ? "ativo" : ""}>Perfil</NavLink>
             </nav>
 
             <Routes>
