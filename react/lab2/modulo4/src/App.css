@@ -186,5 +186,14 @@
 .ativo{
   font-weight: bold;
   text-decoration: underline;
-  margin: 10px;
+  margin: 5px;
+  padding: px;
+}
+
+.inativo{
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  display: inline-block;
+  color: #aa3bff
 }

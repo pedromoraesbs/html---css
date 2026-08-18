@@ -1,15 +1,12 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
+import produtos from "../data/produtos"
 
 
 function Produto() {
 
     const { id } = useParams()
 
-    const produtos = [
-        { id: 1, nome: "Notebook", preco: 3500 },
-        { id: 2, nome: "Mouse", preco: 120 },
-        { id: 3, nome: "Teclado", preco: 250 }
-    ]
+    
 
     const produtoEncontrado = produtos.find((produto) => produto.id === Number(id))
 
@@ -22,6 +19,7 @@ function Produto() {
         <div>
             <h1>{produtoEncontrado.nome}</h1>
             <p>${produtoEncontrado.preco}</p>
+            <Link to={`/produtos`}>Voltar</Link>
         </div>
     )
 }

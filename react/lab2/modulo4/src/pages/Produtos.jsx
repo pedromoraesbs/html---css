@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom"
+import produtos from "../data/produtos"
 
 function Produtos() {
 
-    const produtos = [
-        { id: 1, nome: "Notebook", preco: 3500 },
-        { id: 2, nome: "Mouse", preco: 120 },
-        { id: 3, nome: "Teclado", preco: 250 }
-    ]
 
     return (
         <>
@@ -20,6 +16,8 @@ function Produtos() {
                     <Link to={`/produto/${produto.id}`}>
                         Ver produto
                     </Link>
+
+                
 
                 </div>
             ))}

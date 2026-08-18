@@ -1,4 +1,5 @@
 import { Routes, Route, NavLink } from "react-router-dom"
+import './App.css'
 
 import Home from "./pages/Home"
 import Perfil from "./pages/Perfil"
@@ -11,9 +12,9 @@ function App() {
     return (
         <>
             <nav>
-                <NavLink to="/" className={({isActive}) => isActive ? "ativo" : ""}>Home</NavLink>
-                <NavLink to="/perfil" className={({isActive}) => isActive ? "ativo" : ""}>Perfil</NavLink>
-                <NavLink to="/produtos" className={({isActive}) => isActive ? "ativo" : ""}>Produtos</NavLink>
+                <NavLink to="/" className={({isActive}) => isActive ? "ativo" : "inativo"}>Home</NavLink>
+                <NavLink to="/perfil" className={({isActive}) => isActive ? "ativo" : "inativo"}>Perfil</NavLink>
+                <NavLink to="/produtos" className={({isActive}) => isActive ? "ativo" : "inativo"}>Produtos</NavLink>
             </nav>
 
             <Routes>
