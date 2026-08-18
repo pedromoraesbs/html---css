@@ -186,4 +186,5 @@
 .ativo{
   font-weight: bold;
   text-decoration: underline;
+  margin: 10px;
 }

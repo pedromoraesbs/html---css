@@ -1,8 +1,13 @@
+import { useParams } from "react-router-dom"
+
+
 function Perfil() {
+
+const {id} = useParams()
+
     return (
         <>
-            <h1>Ola, mundo </h1>
-            <p>Vamos começar</p>
+            <h1>Perfil do usuario: {id}</h1>
         </>
     )
 }
