@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 
 import Layout from "./components/Layout"
 
-import Home from "./pages/Home"
+import PerfilInicio from "./pages/PerfilInicio"
 import Perfil from "./pages/Perfil"
 import Configuracoes from "./pages/Configuracoes"
 import Seguranca from "./pages/Seguranca"
@@ -14,14 +14,11 @@ function App() {
             <Route element={<Layout />}>
 
                 <Route
-                    path="/"
-                    element={<Home />}
-                />
-
-                <Route
                     path="/perfil"
                     element={<Perfil />}
                 >
+                    <Route index 
+                    element={<PerfilInicio />} />
 
                     <Route
                         path="configuracoes"
