@@ -1,21 +1,13 @@
-import { Link, Outlet } from "react-router-dom"
+import { useParams } from "react-router-dom"
+
 
 function Perfil() {
+
+const {id} = useParams()
+
     return (
         <>
-            <h1>Perfil</h1>
-
-            <nav>
-                <Link to="configuracoes">
-                    Configurações
-                </Link>
-
-                <Link to="seguranca">
-                    Segurança
-                </Link>
-            </nav>
-
-            <Outlet />
+            <h1>Perfil do usuario: {id}</h1>
         </>
     )
 }

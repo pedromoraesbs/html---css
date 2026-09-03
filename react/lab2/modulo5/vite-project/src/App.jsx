@@ -1,43 +1,32 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, NavLink } from "react-router-dom"
+import './App.css'
 
-import Layout from "./components/Layout"
 
+import Layout from "./componets/Layout"
 import Home from "./pages/Home"
 import Perfil from "./pages/Perfil"
-import Configuracoes from "./pages/Configuracoes"
-import Seguranca from "./pages/Seguranca"
+
+
+
 
 function App() {
     return (
-        <Routes>
+        <>
+           
+            <Routes>
+                <Route element={<Layout />}>
 
-            <Route element={<Layout />}>
-
-                <Route
-                    path="/"
-                    element={<Home />}
-                />
-
-                <Route
-                    path="/perfil"
-                    element={<Perfil />}
-                >
-
-                    <Route
-                        path="configuracoes"
-                        element={<Configuracoes />}
-                    />
-
-                    <Route
-                        path="seguranca"
-                        element={<Seguranca />}
-                    />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/perfil" element={<Perfil />} />
+                    <Route path="/produtos" element={<Produtos />} />
+                    <Route path="/produto/:id" element={<Produto />} />
 
                 </Route>
 
-            </Route>
+                <Route path="*" element={<NotFuond />} />
 
-        </Routes>
+            </Routes>
+        </>
     )
 }
 
