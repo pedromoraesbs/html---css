@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+
+body.light {
+  background: #2EA1C9;
+  transition: .3s;
+
+}
+
+body.dark {
+  background: #121212;
+  transition: .3s;
+}
