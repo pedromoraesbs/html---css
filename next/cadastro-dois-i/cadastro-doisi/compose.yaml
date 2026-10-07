@@ -1,0 +1,7 @@
+services:
+  next-app:
+    build: .
+    container_name: next_production_service
+    ports:
+      - "3000:3000"
+    restart: always
