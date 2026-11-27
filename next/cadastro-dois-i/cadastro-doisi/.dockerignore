@@ -1,0 +1,8 @@
+node_modules
+.next
+.git
+npm-debug.log*
+Dockerfile
+compose.yaml
+nginx.conf
+nginx.conf.bak
